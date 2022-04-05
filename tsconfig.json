@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/smartIcons/index.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/smartIcons/index.tsx", "src/components/ProjectCards/index.tsx"],
   "exclude": ["node_modules"]
 }

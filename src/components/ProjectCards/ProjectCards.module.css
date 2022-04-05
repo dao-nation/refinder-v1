@@ -1,0 +1,31 @@
+
+
+.outter_card_wrapper {
+    /* background-color: cadetblue; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-flow:row wrap;
+    margin-bottom: 20px;
+}
+
+.inner_card_wrapper {
+    margin-bottom: 25px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.card_wrapper {
+    width: clamp(250px, 50vw, 300px); 
+    height: clamp(250px, 50vh, 300px);
+    margin: 30px 15px;
+}
+
+.see_more_btn {
+    margin-bottom: 15px;
+} 

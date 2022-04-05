@@ -1,11 +1,25 @@
-import DAONationIcon from "../../src/components/smartIcons/DAONationIcon";
+import ProjectCards from '../../src/components/ProjectCards';
+import { firestore } from '../../lib/firebase';
+const LIMIT = 10;
 
-const ProjectsPage = ({}) => {
+export async function getStaticProps() {
+  const projectQuery = firestore
+    .collection('projects')
+    .where('readyToList', '==', true)
+    .limit(LIMIT);
+
+  const projects = (await projectQuery.get()).docs.map((doc) => doc.data());
+  return {
+    props: { projects },
+    revalidate: 10,
+  };
+}
+
+const ProjectsPage = ({ projects }: any) => {
   return (
-    <div>
-      <DAONationIcon />
-      Hi this is projects
-    </div>
+    <>
+      <ProjectCards projects={projects} />
+    </>
   );
 };
 

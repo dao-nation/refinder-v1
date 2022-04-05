@@ -1,0 +1,22 @@
+.chips_card_wrapper {
+    width: clamp(200px, 30vw, 500px)
+}
+
+
+.chips_card {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.chips_header {
+    margin: 5px;
+}
+
+.chips_wrapper {
+    margin-bottom: 7px;
+}
+
+.chip {
+    margin: 5px;
+}

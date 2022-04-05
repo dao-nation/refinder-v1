@@ -1,0 +1,19 @@
+.socials_card_wrapper {
+    width: clamp(200px, 40vw, 400px)
+}
+
+.socials_card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+}
+
+.socials_header {
+    text-align: center;
+    margin: 9px auto;
+}
+
+.socials_button {
+    margin: 7px;
+}
