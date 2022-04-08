@@ -9,6 +9,7 @@ export interface MUIAppProps extends AppProps {
 }
 
 function MyApp({ Component, pageProps }: AppProps, emotionCache: EmotionCache) {
+  //
   return (
     <PageProvider emotionCache={emotionCache}>
       <NavBar />
