@@ -8,7 +8,7 @@ export interface MUIAppProps extends AppProps {
   emotionCache?: EmotionCache;
 }
 
-function MyApp({ Component, pageProps }: AppProps, emotionCache: EmotionCache) {
+function MyApp({ Component, pageProps, emotionCache }: MUIAppProps) {
   //
   return (
     <PageProvider emotionCache={emotionCache}>
