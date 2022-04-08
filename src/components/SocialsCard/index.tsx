@@ -1,7 +1,7 @@
 import { checkSocials } from './utils';
 import styles from './SocialsCard.module.css';
 import Card from '@mui/material/Card';
-import Button from '@mui/material/button';
+import Button from '@mui/material/Button';
 import Link from 'next/link';
 
 export default function SocialsCard({ socials }: any) {
