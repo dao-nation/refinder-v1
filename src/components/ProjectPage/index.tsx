@@ -9,20 +9,28 @@ export default function ProjectPage({ projectInfo }: any) {
   return (
     <div className={styles.outter_card_container}>
       <Card>
-        <CardHeader
-          avatar={
-            <Avatar
-              src={projectInfo.project_avatar}
-              sx={{ width: 100, height: 100 }}
-            />
-          }
-        ></CardHeader>
-        <h1>{projectInfo.project_name}</h1>
-        <h3>{projectInfo.project_bio}</h3>
-        <ChipsList chipsName='Chains' chipsArr={projectInfo.chains} />
-        <ChipsList chipsName='Niches' chipsArr={projectInfo.niches} />
+        <div className={styles.card_hero_wrapper}>
+          <div>
+            <CardHeader
+              avatar={
+                <Avatar
+                  src={projectInfo.project_avatar}
+                  sx={{ width: 100, height: 100 }}
+                />
+              }
+            ></CardHeader>
+            <h1>{projectInfo.project_name}</h1>
+            <h3>{projectInfo.project_bio}</h3>
+            <div className={styles.chips_container}>
+              <ChipsList chipsName='Chains' chipsArr={projectInfo.chains} />
+              <ChipsList chipsName='Niches' chipsArr={projectInfo.niches} />
+            </div>
+          </div>
+          <div className={styles.socials_card}>
+            <SocialsCard socials={projectInfo.socials} />
+          </div>
+        </div>
         <AnalyticsContent />
-        <SocialsCard socials={projectInfo.socials} />
       </Card>
     </div>
   );

@@ -1,5 +1,5 @@
 .chips_card_wrapper {
-    width: clamp(200px, 30vw, 500px)
+    width: clamp(200px, 30vw, 300px)
 }
 
 
@@ -7,6 +7,9 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    margin-right: 7px;
+    border-radius: 19px;
+    background-color: #272727;
 }
 
 .chips_header {

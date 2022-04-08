@@ -1,3 +1,4 @@
+import styles from './ListItems.module.css';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 
@@ -6,7 +7,7 @@ export default function ListItems({ headerNameArr, setStateFunction }: any) {
     <>
       {headerNameArr.map((headerName: string) => {
         return (
-          <ListItem button key={headerName}>
+          <ListItem className={styles.list_items} button key={headerName}>
             <ListItemText
               primary={headerName}
               onClick={() => {

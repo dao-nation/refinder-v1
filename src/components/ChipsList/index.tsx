@@ -7,7 +7,7 @@ export default function ChipsList({ chipsName, chipsArr }: any) {
 
   return (
     <div className={styles.chips_card_wrapper}>
-      <Card className={styles.chips_card} raised={true}>
+      <div className={styles.chips_card}>
         <h3 className={styles.chips_header}>{chipsName}</h3>
         <div className={styles.chips_wrapper}>
           {chipsArr &&
@@ -23,7 +23,7 @@ export default function ChipsList({ chipsName, chipsArr }: any) {
               );
             })}
         </div>
-      </Card>
+      </div>
     </div>
   );
 }

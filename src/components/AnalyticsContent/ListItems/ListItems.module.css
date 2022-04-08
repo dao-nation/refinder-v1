@@ -1,0 +1,8 @@
+.list_items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+

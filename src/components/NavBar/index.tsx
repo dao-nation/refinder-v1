@@ -7,10 +7,12 @@ import AppBar from '@mui/material/AppBar';
 import TwitterIcon from '../smartIcons/TwitterIcon';
 export default function NavBar() {
   return (
-    <AppBar position='static'>
+    <AppBar position='static' color='default'>
       <div className={styles.navBar}>
         <Link passHref={true} href='/'>
-          <DAONationHeader />
+          <a>
+            <DAONationHeader />
+          </a>
         </Link>
         <span className={styles.filler}></span>
         <div className={styles.nav_bar_btn_container}>
