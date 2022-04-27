@@ -2,9 +2,12 @@
 <!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-<path style="fill:#FFFFFF;" d="M15.6,1.3H3.1v21.4h17.8v-16L15.6,1.3z M15.6,4l2.7,2.7h-2.7V4z M4.9,20.9V3.1h8.9v5.3h5.3v12.5H4.9z
-	"/>
-<rect x="6.4" y="10.4" style="fill:#FFFFFF;stroke:#FFFFFF;stroke-width:0.25;stroke-miterlimit:10;" width="10.7" height="1"/>
-<rect x="6.4" y="13.6" style="fill:#FFFFFF;stroke:#FFFFFF;stroke-width:0.25;stroke-miterlimit:10;" width="10.7" height="1"/>
-<rect x="6.4" y="16.9" style="fill:#FFFFFF;stroke:#FFFFFF;stroke-width:0.25;stroke-miterlimit:10;" width="10.7" height="1"/>
+<style type="text/css">
+	.st0{stroke:#FFFFFF;stroke-width:0.25;stroke-miterlimit:10;}
+</style>
+<path d="M15.9,1.3H3.4v21.4h17.8v-16L15.9,1.3z M15.9,4l2.7,2.7h-2.7C15.9,6.7,15.9,4,15.9,4z M5.2,20.9V3.1h8.9v5.3h5.3v12.5H5.2z"
+	/>
+<rect x="6.6" y="10.4" class="st0" width="10.7" height="1"/>
+<rect x="6.7" y="13.6" class="st0" width="10.7" height="1"/>
+<rect x="6.7" y="16.9" class="st0" width="10.7" height="1"/>
 </svg>

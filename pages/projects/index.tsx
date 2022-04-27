@@ -1,6 +1,6 @@
 import ProjectCards from '../../src/components/ProjectCards';
 import { firestore } from '../../lib/firebase';
-const LIMIT = 10;
+const LIMIT = 50;
 
 export async function getStaticProps() {
   const projectQuery = firestore
@@ -11,7 +11,7 @@ export async function getStaticProps() {
   const projects = (await projectQuery.get()).docs.map((doc) => doc.data());
   return {
     props: { projects },
-    revalidate: 10,
+    revalidate: 50,
   };
 }
 

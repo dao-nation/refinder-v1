@@ -1,3 +1,1 @@
-const value = null;
-
-export default value;
+export const the_null = null;

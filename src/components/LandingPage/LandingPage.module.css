@@ -1,0 +1,73 @@
+.parallax_container {
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    perspective: 2px;
+}
+
+.hero_container {
+    background-color: #1B3D2D ;
+    /* color: #1B3D2D; */
+    /* height: 100vh;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: center;
+overflow: hidden;
+perspective: 2px; */
+}
+
+.first_block {
+        /* margin: 0;
+    padding: 0;     */
+}
+
+.main_text_container {
+    /* background-color: yellow; */
+    padding:7% 10%;
+    margin-top: 200px;
+}
+
+.cta_button {
+    margin-top: 15px;
+    background-color: #1B3D2D;
+    color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+    /* border: none; */
+    font-size: 1.2em;
+    /* font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; */
+}
+
+
+
+.main_text {
+    font-size: 2.2em;
+}
+
+
+.second_block_main_text {
+    font-size: 1.7em;
+    color: white;
+    /* background-color: #95dd88; */
+}
+
+/* .second_block {
+    margin: 0;
+    padding: 0; */
+/* } */
+
+.second_block_card_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second_block_card {
+    width: clamp(250px, 30vw, 500px);
+    margin: 5px;
+    text-align: center;
+}

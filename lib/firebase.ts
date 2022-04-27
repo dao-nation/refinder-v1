@@ -3,15 +3,42 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import 'firebase/compat/storage';
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyCAJZgslWy4cqgE68mPyaqXaZNEQ1lP7KQ',
-  authDomain: 'dao-nation-v1-dev.firebaseapp.com',
-  projectId: 'dao-nation-v1-dev',
-  storageBucket: 'dao-nation-v1-dev.appspot.com',
-  messagingSenderId: '560507226442',
-  appId: '1:560507226442:web:c8abf74d5fb2e992d019b3',
-  measurementId: 'G-B5F0EHLHV4',
+const getFirebaseConfig = () => {
+  let firebaseConfig = {
+    apiKey: 'AIzaSyDQRXMeNB-XY9Z4qe0jhUSUnLdofZFlRdc',
+    authDomain: 'dao-nation-prod.firebaseapp.com',
+    projectId: 'dao-nation-prod',
+    storageBucket: 'dao-nation-prod.appspot.com',
+    messagingSenderId: '761695380079',
+    appId: '1:761695380079:web:514e210f2f30d0ae38639a',
+    measurementId: 'G-F3YRM4G5QL',
+  };
+  if (firebaseConfig) {
+    // dev config
+    // firebaseConfig = {
+    //   apiKey: 'AIzaSyCAJZgslWy4cqgE68mPyaqXaZNEQ1lP7KQ',
+    //   authDomain: 'dao-nation-v1-dev.firebaseapp.com',
+    //   projectId: 'dao-nation-v1-dev',
+    //   storageBucket: 'dao-nation-v1-dev.appspot.com',
+    //   messagingSenderId: '560507226442',
+    //   appId: '1:560507226442:web:c8abf74d5fb2e992d019b3',
+    //   measurementId: 'G-B5F0EHLHV4',
+    // };
+  } else {
+    // firebaseConfig = {
+    //   apiKey: 'AIzaSyDQRXMeNB-XY9Z4qe0jhUSUnLdofZFlRdc',
+    //   authDomain: 'dao-nation-prod.firebaseapp.com',
+    //   projectId: 'dao-nation-prod',
+    //   storageBucket: 'dao-nation-prod.appspot.com',
+    //   messagingSenderId: '761695380079',
+    //   appId: '1:761695380079:web:514e210f2f30d0ae38639a',
+    //   measurementId: 'G-F3YRM4G5QL',
+    // };
+  }
+  return firebaseConfig;
 };
+
+const firebaseConfig = getFirebaseConfig();
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);

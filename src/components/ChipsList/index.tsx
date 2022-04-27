@@ -15,7 +15,7 @@ export default function ChipsList({ chipsName, chipsArr }: any) {
               return (
                 <Chip
                   className={styles.chip}
-                  color='secondary'
+                  color='primary'
                   clickable={true}
                   key={name}
                   label={name}

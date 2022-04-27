@@ -7,7 +7,7 @@ import AppBar from '@mui/material/AppBar';
 import TwitterIcon from '../smartIcons/TwitterIcon';
 export default function NavBar() {
   return (
-    <AppBar position='static' color='default'>
+    <AppBar position='static' color='transparent'>
       <div className={styles.navBar}>
         <Link passHref={true} href='/'>
           <a>
@@ -18,6 +18,7 @@ export default function NavBar() {
         <div className={styles.nav_bar_btn_container}>
           <Link passHref={true} href='/'>
             <Button
+              color='info'
               className={styles.nav_bar_btn}
               size='small'
               startIcon={<DiscordIcon />}
@@ -27,6 +28,7 @@ export default function NavBar() {
           </Link>
           <Link passHref={true} href='/'>
             <Button
+              color='info'
               className={styles.nav_bar_btn}
               size='small'
               startIcon={<TwitterIcon />}
@@ -35,12 +37,22 @@ export default function NavBar() {
             </Button>
           </Link>
           <Link passHref={true} href='/'>
-            <Button className={styles.nav_bar_btn} variant='outlined'>
+            <Button
+              size='small'
+              color='info'
+              className={styles.nav_bar_btn}
+              variant='outlined'
+            >
               Contribute
             </Button>
           </Link>
           <Link passHref={true} href='/projects'>
-            <Button className={styles.nav_bar_btn} variant='contained'>
+            <Button
+              size='small'
+              color='info'
+              className={styles.nav_bar_btn}
+              variant='outlined'
+            >
               Find Projects
             </Button>
           </Link>

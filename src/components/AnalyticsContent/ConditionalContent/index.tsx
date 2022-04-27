@@ -1,6 +1,6 @@
 export default function ConditionalContent({ currentState }: any) {
   if (currentState === 'Overview') {
-    return <h1>High Level Analytics Coming Soon</h1>;
+    return <h1>High Level Analytics Coming Soon!</h1>;
   }
   if (currentState === 'Token Health') {
     return <h1>Token Health Analytics Coming Soon</h1>;
