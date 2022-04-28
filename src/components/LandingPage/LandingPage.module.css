@@ -8,7 +8,7 @@
 }
 
 .hero_container {
-    background-color: #1B3D2D ;
+    /* background-color: #1B3D2D ; */
     /* color: #1B3D2D; */
     /* height: 100vh;
 background-attachment: fixed;
@@ -49,10 +49,18 @@ perspective: 2px; */
 }
 
 
-.second_block_main_text {
+.block_main_text {
     font-size: 1.7em;
     color: white;
+    margin-left: 20px;
     /* background-color: #95dd88; */
+}
+
+.block_subtitle {
+    font-size: 1em;
+    color: white;
+    margin-left: 20px;
+    font-weight: 300;
 }
 
 /* .second_block {
@@ -62,12 +70,38 @@ perspective: 2px; */
 
 .second_block_card_container {
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.second_block_card {
+    background-color: #061f13;
+        border-radius: 15px;
+    color: white;
+    width: clamp(250px, 30vw, 400px);
+    margin: 5px;
+    text-align: center;
+}
+
+.card_header {
+    font-size: 1.7rem;
+    font-weight: light;
+}
+
+.cta_button_2_container {
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.second_block_card {
-    width: clamp(250px, 30vw, 500px);
-    margin: 5px;
-    text-align: center;
+.cta_button_2 {
+     margin-top: 15px;
+    background-color: #2E9A66;
+    color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 1.2em;
 }
+

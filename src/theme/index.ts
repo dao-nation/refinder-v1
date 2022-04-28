@@ -14,7 +14,7 @@ export const DEFAULT_THEME: AllowedTheme = 'light';
 export const darkTheme = createTheme({
   palette: {
     // #7D9A78
-    primary: { main: '#7D9A78', light: '#9EDDBC', contrastText: '#00000' },
+    primary: { main: '#2E9A66', light: '#9EDDBC', contrastText: '#00000' },
     secondary: { main: '#9EDDBC', contrastText: '#0000' },
     mode: 'light',
   },
