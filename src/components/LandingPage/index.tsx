@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { useEffect, useState } from 'react';
-import DAONationHeader from '../smartIcons/DAONationHeader';
+import { useMediaQuery } from '../../../lib/hooks';
 import LightBulbIcon from '../smartIcons/LightBulbIcon';
 import CheckMarkIcon from '../smartIcons/CheckMarkIcon';
 import VentureDAOIcon from '../smartIcons/VentureDAOIcon';
@@ -18,47 +18,46 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import styles from './LandingPage.module.css';
 export default function LandingPage() {
-  const [sectionTwoOffset, setSectionTwoOffset] = useState(2);
-  const [sectionThreeOffset, setSectionThreeOffset] = useState(
-    sectionTwoOffset + 1
-  );
-  const [sectionFourOffset, setSectionFourOffset] = useState(
-    sectionTwoOffset + 2
-  );
-  const [sectionFiveOffset, setSectionFiveOffset] = useState(
-    sectionTwoOffset + 3
-  );
+  const isBreakPoint = useMediaQuery(768);
 
-  useEffect(() => {
-    if (window.innerWidth > 797) {
-      setSectionTwoOffset(2);
-      setSectionThreeOffset(2.7);
-      setSectionFourOffset(3);
-      setSectionFiveOffset(4);
-    } else {
-      setSectionTwoOffset(3);
-      setSectionThreeOffset(4);
-      setSectionFourOffset(5);
-      setSectionFiveOffset(6);
-    }
-    const updateMedia = () => {
-      if (window.innerWidth > 797) {
-        setSectionTwoOffset(2);
-        setSectionThreeOffset(2.7);
-      } else {
-        setSectionTwoOffset(3);
-        setSectionThreeOffset(4);
-        setSectionFiveOffset(6);
-      }
-    };
-    window.addEventListener('resize', updateMedia);
-    return () => window.removeEventListener('resize', updateMedia);
-  }, []);
+  return (
+    <>
+      {isBreakPoint ? (
+        // smaller: STARTS @ 1.2
+        <LandingPageContent
+          pages={9}
+          sectionTwoOffset={3}
+          sectionThreeOffset={4.6}
+          sectionFourOffset={6}
+          sectionFiveOffset={7}
+        />
+      ) : (
+        //Bigger
+        <LandingPageContent
+          sectionTwoOffset={2.2}
+          sectionThreeOffset={3}
+          sectionFourOffset={3.7}
+          sectionFiveOffset={4.2}
+          pages={5.2}
+        />
+      )}
+    </>
+  );
+}
 
+// Discord Twitter Github Medium Notion
+
+function LandingPageContent({
+  pages,
+  sectionTwoOffset,
+  sectionThreeOffset,
+  sectionFourOffset,
+  sectionFiveOffset,
+}: any) {
   return (
     <div className={styles.hero_container}>
       <Parallax
-        pages={sectionFiveOffset}
+        pages={pages}
         className={styles.parallax_container}
         style={{
           top: '0',
@@ -67,6 +66,7 @@ export default function LandingPage() {
           backgroundColor: '#1B3D2D',
         }}
       >
+        {/* #1 */}
         <ParallaxLayer
           style={{
             backgroundImage: `url('/assets/landing-page-img.svg')`,
@@ -77,7 +77,14 @@ export default function LandingPage() {
         >
           <NavBar />
         </ParallaxLayer>
-        <ParallaxLayer style={{ margin: '0', padding: '0' }} speed={0.5}>
+        {/*  #2: HERO Mess Offset : 0 */}
+        <ParallaxLayer
+          style={{
+            margin: '0',
+            padding: '0',
+          }}
+          // speed={0.5}
+        >
           <div className={styles.main_text_container}>
             <p className={styles.main_text}>WELCOME TO DAO NATION</p>
             <h1>A Decentralized Ecosystem for Social Impact</h1>
@@ -97,11 +104,14 @@ export default function LandingPage() {
             </Button>
           </div>
         </ParallaxLayer>
+        {/* #3 : Join the Nation's Movmement*/}
         <ParallaxLayer
           offset={1.2}
           speed={0.1}
           className={styles.second_block}
-          style={{ backgroundColor: '#1B3D2D' }}
+          style={{
+            backgroundColor: '#1B3D2D',
+          }}
         >
           <p className={styles.block_main_text}>
             JOIN THE NATION&apos;S MOVEMENT
@@ -157,7 +167,9 @@ export default function LandingPage() {
             </Button>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={sectionTwoOffset} speed={0.7}>
+        {/* #4 Our Infrastructure */}
+        <ParallaxLayer offset={sectionTwoOffset} speed={0.2}>
+          <h1>SectionTwoOffset:{sectionTwoOffset}</h1>
           <p className={styles.block_main_text}>Our Infrastructure</p>
           <div className={styles.second_block_card_container}>
             <Card className={styles.second_block_card}>
@@ -190,7 +202,10 @@ export default function LandingPage() {
                 <Button
                   variant='outlined'
                   disabled={true}
-                  style={{ color: '#287a53', border: '1px solid #287a53' }}
+                  style={{
+                    color: '#287a53',
+                    border: '1px solid #287a53',
+                  }}
                 >
                   Coming Soon
                 </Button>
@@ -212,9 +227,9 @@ export default function LandingPage() {
             </Card>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={sectionThreeOffset} speed={0.7}>
+        {/* #5: Start your own ESG Protocol */}
+        <ParallaxLayer offset={sectionThreeOffset} speed={0.2}>
           <div>
-            {/* Make them Icon Button */}
             <p className={styles.block_main_text}>
               START YOUR OWN ESG PROTOCOL
             </p>
@@ -267,7 +282,8 @@ export default function LandingPage() {
             />
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={sectionFourOffset} speed={1}>
+        {/* #6: How Can I contribute */}
+        <ParallaxLayer offset={sectionFourOffset} speed={0.2}>
           <Card className={styles.fourth_block_card}>
             <div className={styles.section_four_card_container}>
               <p className={styles.section_four_card_header}>
@@ -286,7 +302,9 @@ export default function LandingPage() {
                     alt='Green Hammer'
                     width='100px'
                     height='100px'
-                    style={{ borderRadius: '50%' }}
+                    style={{
+                      borderRadius: '50%',
+                    }}
                   />
                   <p>Product & Development</p>
                 </CardContent>
@@ -298,7 +316,9 @@ export default function LandingPage() {
                     alt='Green Building'
                     width='100px'
                     height='100px'
-                    style={{ borderRadius: '50%' }}
+                    style={{
+                      borderRadius: '50%',
+                    }}
                   />
                   <p>Governance & Coordination</p>
                 </CardContent>
@@ -310,7 +330,9 @@ export default function LandingPage() {
                     alt='Green Handshake'
                     width='100px'
                     height='100px'
-                    style={{ borderRadius: '50%' }}
+                    style={{
+                      borderRadius: '50%',
+                    }}
                   />
                   <p>Growth & Partnerships</p>
                 </CardContent>
@@ -322,7 +344,9 @@ export default function LandingPage() {
                     alt='Green Graduation Cap'
                     width='100px'
                     height='100px'
-                    style={{ borderRadius: '50%' }}
+                    style={{
+                      borderRadius: '50%',
+                    }}
                   />
                   <p>Education & Incubation</p>
                 </CardContent>
@@ -330,8 +354,8 @@ export default function LandingPage() {
             </div>
           </Card>
         </ParallaxLayer>
-        {/* Ok add the text and then you can add the styling */}
-        <ParallaxLayer offset={sectionFiveOffset}>
+        {/* Get Rewarded for being a Part of the solution */}
+        <ParallaxLayer offset={sectionFiveOffset} speed={0.2}>
           <div className={styles.section_five_container}>
             <div className={styles.section_five_header_container}>
               <p className={styles.section_five_header}>
@@ -395,15 +419,9 @@ export default function LandingPage() {
                 </div>
               </div>
             </Card>
-            {/* <Card>
-              <p>Want to learn more about DAO Nation? </p>
-              <Button>Whitepaper</Button>
-            </Card> */}
           </div>
         </ParallaxLayer>
       </Parallax>
     </div>
   );
 }
-
-// Discord Twitter Github Medium Notion
