@@ -148,46 +148,49 @@
     font-size: 1.3rem;
     font-weight: light;
 }
-
+/* leave alone */
 .section_four_card_subtitle {
     font-size: 1.7em;
     font-weight: 400;
     width: clamp(300px, 40vw, 500px);
+
     margin-top: 45px;
 }
 
-.section_four_container {
+.section_five_container {
     display: flex;
     flex-flow: column wrap;
 }
 
-.section_four_header_container {
+
+
+.section_five_header_container {
     display: flex;
     flex-direction: column;
     margin-left: 7%;
     color: white;
 }
 
-.section_four_header {
+.section_five_header {
     font-size: 2.3em;
     width: 50%;
     margin-bottom: 0;
 }
 
-.section_four_subtitle {
+.section_five_subtitle {
     font-size: 1em;
     width: 60%;
 }
 
 
-.section_four_cards_container {
+.section_five_cards_container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     margin-bottom: 150px;
 }
 
-.section_four_card_1, .section_four_card_2, .section_four_card_3 {
+.section_five_card_1, .section_five_card_2, .section_five_card_3 {
     width: clamp(225px, 20vw, 300px);
     height: clamp(300px, 25vh, 600px);
     color: white;
@@ -208,26 +211,26 @@
     margin-right: 100px;
 } */
 
-.section_four_card_emoji {
+.section_five_card_emoji {
     font-size: 2.5em;
     margin: 0;
     padding: 10px;
     padding-bottom: 0;
 }
 
-.section_four_card_header {
+.section_five_card_header {
     font-weight: 500;
     margin-top: 5px;
     padding-left: 10px;
 }
 
-.section_four_card_subtitle {
+.section_five_card_subtitle {
     margin-top: 0;
     font-size: 1em;
     width: 100%;
     padding: 0 10px;
 }
-.section_four_second_card {
+.section_five_second_card {
     background-color: #061f13;
     color: white;
     width: clamp(350px, 80vw, 1000px);
@@ -236,13 +239,13 @@
     margin: 0 auto 50px auto;
 }
 
-.section_four_second_card_container {
+.section_five_second_card_container {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.section_four_second_card_header {
+.section_five_second_card_header {
     font-size: 1.3em;
     padding-left: 10px;
     width: 50%;

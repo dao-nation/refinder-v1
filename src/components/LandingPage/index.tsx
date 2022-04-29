@@ -332,9 +332,9 @@ export default function LandingPage() {
         </ParallaxLayer>
         {/* Ok add the text and then you can add the styling */}
         <ParallaxLayer offset={sectionFiveOffset}>
-          <div className={styles.section_four_container}>
-            <div className={styles.section_four_header_container}>
-              <p className={styles.section_four_header}>
+          <div className={styles.section_five_container}>
+            <div className={styles.section_five_header_container}>
+              <p className={styles.section_five_header}>
                 Get Rewarded for being part of the solution
               </p>
               <p className={styles.section_four_subtitle}>
@@ -342,38 +342,38 @@ export default function LandingPage() {
                 you&apos;ll get rewarded with $ESG Tokens
               </p>
             </div>
-            <div className={styles.section_four_card_wrapper}>
-              <div className={styles.section_four_cards_container}>
-                <Card className={styles.section_four_card_1}>
-                  <p className={styles.section_four_card_emoji}>🌎</p>
-                  <p className={styles.section_four_card_header}>
+            <div className={styles.section_five_card_wrapper}>
+              <div className={styles.section_five_cards_container}>
+                <Card className={styles.section_five_card_1}>
+                  <p className={styles.section_five_card_emoji}>🌎</p>
+                  <p className={styles.section_five_card_header}>
                     Join Working Groups
                   </p>
-                  <p className={styles.section_four_card_subtitle}>
+                  <p className={styles.section_five_card_subtitle}>
                     working groups are the autonomous DAO Arm teams.
                   </p>
                 </Card>
-                <Card className={styles.section_four_card_2}>
-                  <p className={styles.section_four_card_emoji}>🚀</p>
-                  <p className={styles.section_four_card_header}>Contribute</p>
-                  <p className={styles.section_four_card_subtitle}>
+                <Card className={styles.section_five_card_2}>
+                  <p className={styles.section_five_card_emoji}>🚀</p>
+                  <p className={styles.section_five_card_header}>Contribute</p>
+                  <p className={styles.section_five_card_subtitle}>
                     Put your skills to use & permissionlessly drive real change
                   </p>
                 </Card>
-                <Card className={styles.section_four_card_3}>
-                  <p className={styles.section_four_card_emoji}>💰</p>
-                  <p className={styles.section_four_card_header}>
+                <Card className={styles.section_five_card_3}>
+                  <p className={styles.section_five_card_emoji}>💰</p>
+                  <p className={styles.section_five_card_header}>
                     Earn Rewards
                   </p>
-                  <p className={styles.section_four_card_subtitle}>
+                  <p className={styles.section_five_card_subtitle}>
                     Mine $ESG by being an active contriutor to DAO Nation
                   </p>
                 </Card>
               </div>
             </div>
-            <Card className={styles.section_four_second_card}>
-              <div className={styles.section_four_second_card_container}>
-                <p className={styles.section_four_second_card_header}>
+            <Card className={styles.section_five_second_card}>
+              <div className={styles.section_five_second_card_container}>
+                <p className={styles.section_five_second_card_header}>
                   Join the community <br /> Change the world{' '}
                 </p>
                 <div>
