@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 const TwitterIcon = () => {
-  const icon = require("./twitter.svg") as string;
+  const icon = require('./twitter.svg') as string;
   return (
-    <Image height="35px" width="35px" src={icon} alt="Twitter logo"></Image>
+    <Image height='28px' width='28px' src={icon} alt='Twitter logo'></Image>
   );
 };
 

@@ -1,12 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { useEffect, useState } from 'react';
+import DAONationHeader from '../smartIcons/DAONationHeader';
 import LightBulbIcon from '../smartIcons/LightBulbIcon';
 import CheckMarkIcon from '../smartIcons/CheckMarkIcon';
 import VentureDAOIcon from '../smartIcons/VentureDAOIcon';
 import NavBar from '../NavBar';
 import Image from 'next/image';
 import Button from '@mui/material/Button';
+import DiscordIcon from '../smartIcons/DiscordIcon';
+import TwitterIcon from '../smartIcons/TwitterIcon';
+import GithubIcon from '../smartIcons/GithubIcon';
+import MediumIcon from '../smartIcons/MediumIcon';
+import NotionIcon from '../smartIcons/NotionIcon';
+import IconButton from '@mui/material/IconButton';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import styles from './LandingPage.module.css';
@@ -15,20 +22,33 @@ export default function LandingPage() {
   const [sectionThreeOffset, setSectionThreeOffset] = useState(
     sectionTwoOffset + 1
   );
+  const [sectionFourOffset, setSectionFourOffset] = useState(
+    sectionTwoOffset + 2
+  );
+  const [sectionFiveOffset, setSectionFiveOffset] = useState(
+    sectionTwoOffset + 3
+  );
 
   useEffect(() => {
     if (window.innerWidth > 797) {
       setSectionTwoOffset(2);
       setSectionThreeOffset(2.7);
+      setSectionFourOffset(3);
+      setSectionFiveOffset(4);
     } else {
       setSectionTwoOffset(3);
-      setSectionThreeOffset(4.5);
+      setSectionThreeOffset(4);
+      setSectionFourOffset(5);
+      setSectionFiveOffset(6);
     }
     const updateMedia = () => {
       if (window.innerWidth > 797) {
         setSectionTwoOffset(2);
+        setSectionThreeOffset(2.7);
       } else {
         setSectionTwoOffset(3);
+        setSectionThreeOffset(4);
+        setSectionFiveOffset(6);
       }
     };
     window.addEventListener('resize', updateMedia);
@@ -38,7 +58,7 @@ export default function LandingPage() {
   return (
     <div className={styles.hero_container}>
       <Parallax
-        pages={7}
+        pages={sectionFiveOffset}
         className={styles.parallax_container}
         style={{
           top: '0',
@@ -137,7 +157,7 @@ export default function LandingPage() {
             </Button>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={sectionTwoOffset}>
+        <ParallaxLayer offset={sectionTwoOffset} speed={0.7}>
           <p className={styles.block_main_text}>Our Infrastructure</p>
           <div className={styles.second_block_card_container}>
             <Card className={styles.second_block_card}>
@@ -192,7 +212,7 @@ export default function LandingPage() {
             </Card>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={sectionThreeOffset}>
+        <ParallaxLayer offset={sectionThreeOffset} speed={0.7}>
           <div>
             {/* Make them Icon Button */}
             <p className={styles.block_main_text}>
@@ -247,7 +267,7 @@ export default function LandingPage() {
             />
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={sectionThreeOffset + 1.3}>
+        <ParallaxLayer offset={sectionFourOffset} speed={1}>
           <Card className={styles.fourth_block_card}>
             <div className={styles.section_four_card_container}>
               <p className={styles.section_four_card_header}>
@@ -311,7 +331,7 @@ export default function LandingPage() {
           </Card>
         </ParallaxLayer>
         {/* Ok add the text and then you can add the styling */}
-        <ParallaxLayer offset={sectionThreeOffset + 2.4}>
+        <ParallaxLayer offset={sectionFiveOffset}>
           <div className={styles.section_four_container}>
             <div className={styles.section_four_header_container}>
               <p className={styles.section_four_header}>
@@ -322,10 +342,68 @@ export default function LandingPage() {
                 you&apos;ll get rewarded with $ESG Tokens
               </p>
             </div>
+            <div className={styles.section_four_card_wrapper}>
+              <div className={styles.section_four_cards_container}>
+                <Card className={styles.section_four_card_1}>
+                  <p className={styles.section_four_card_emoji}>🌎</p>
+                  <p className={styles.section_four_card_header}>
+                    Join Working Groups
+                  </p>
+                  <p className={styles.section_four_card_subtitle}>
+                    working groups are the autonomous DAO Arm teams.
+                  </p>
+                </Card>
+                <Card className={styles.section_four_card_2}>
+                  <p className={styles.section_four_card_emoji}>🚀</p>
+                  <p className={styles.section_four_card_header}>Contribute</p>
+                  <p className={styles.section_four_card_subtitle}>
+                    Put your skills to use & permissionlessly drive real change
+                  </p>
+                </Card>
+                <Card className={styles.section_four_card_3}>
+                  <p className={styles.section_four_card_emoji}>💰</p>
+                  <p className={styles.section_four_card_header}>
+                    Earn Rewards
+                  </p>
+                  <p className={styles.section_four_card_subtitle}>
+                    Mine $ESG by being an active contriutor to DAO Nation
+                  </p>
+                </Card>
+              </div>
+            </div>
+            <Card className={styles.section_four_second_card}>
+              <div className={styles.section_four_second_card_container}>
+                <p className={styles.section_four_second_card_header}>
+                  Join the community <br /> Change the world{' '}
+                </p>
+                <div>
+                  <IconButton className={styles.icon_btn}>
+                    <TwitterIcon />
+                  </IconButton>
+                  <IconButton className={styles.icon_btn}>
+                    <DiscordIcon />
+                  </IconButton>
+                  <IconButton className={styles.icon_btn}>
+                    <GithubIcon />
+                  </IconButton>
+                  <IconButton className={styles.icon_btn}>
+                    <MediumIcon />
+                  </IconButton>
+                  <IconButton className={styles.icon_btn}>
+                    <NotionIcon />
+                  </IconButton>
+                </div>
+              </div>
+            </Card>
+            {/* <Card>
+              <p>Want to learn more about DAO Nation? </p>
+              <Button>Whitepaper</Button>
+            </Card> */}
           </div>
         </ParallaxLayer>
       </Parallax>
-      <footer>Gay</footer>
     </div>
   );
 }
+
+// Discord Twitter Github Medium Notion
