@@ -16,7 +16,7 @@ export default function NavBar() {
         </Link>
         <span className={styles.filler}></span>
         <div className={styles.nav_bar_btn_container}>
-          <Link passHref={true} href='/'>
+          <Link passHref={true} href='https://discord.gg/Z5hA3xrTq8'>
             <Button
               color='info'
               className={styles.nav_bar_btn}
@@ -26,7 +26,7 @@ export default function NavBar() {
               Discord
             </Button>
           </Link>
-          <Link passHref={true} href='/'>
+          <Link passHref={true} href='https://twitter.com/DAO_Nation'>
             <Button
               color='info'
               className={styles.nav_bar_btn}
@@ -36,7 +36,10 @@ export default function NavBar() {
               Twitter
             </Button>
           </Link>
-          <Link passHref={true} href='/'>
+          <Link
+            passHref={true}
+            href='https://daonation.notion.site/DAO-Nation-Wiki-3d2c2ed35fae4dc59c875f19cccfa963'
+          >
             <Button
               size='small'
               color='info'
@@ -46,7 +49,7 @@ export default function NavBar() {
               Contribute
             </Button>
           </Link>
-          <Link passHref={true} href='/projects'>
+          {/* <Link passHref={true} href='/projects'>
             <Button
               size='small'
               color='info'
@@ -55,7 +58,7 @@ export default function NavBar() {
             >
               Find Projects
             </Button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </AppBar>

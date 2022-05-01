@@ -17,6 +17,7 @@ import IconButton from '@mui/material/IconButton';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import styles from './LandingPage.module.css';
+import Link from 'next/link';
 export default function LandingPage() {
   const isBreakPoint = useMediaQuery(768);
 
@@ -25,7 +26,8 @@ export default function LandingPage() {
       {isBreakPoint ? (
         // smaller: STARTS @ 1.2
         <LandingPageContent
-          pages={9}
+          // change back to 9
+          pages={1.5}
           sectionTwoOffset={3}
           sectionThreeOffset={4.6}
           sectionFourOffset={6}
@@ -34,11 +36,12 @@ export default function LandingPage() {
       ) : (
         //Bigger
         <LandingPageContent
-          sectionTwoOffset={2.2}
+          sectionTwoOffset={1.5}
           sectionThreeOffset={3}
           sectionFourOffset={3.7}
           sectionFiveOffset={4.2}
-          pages={5.2}
+          //change back to 5.2
+          pages={1}
         />
       )}
     </>
@@ -74,9 +77,7 @@ function LandingPageContent({
           }}
           factor={1}
           className={styles.first_block}
-        >
-          <NavBar />
-        </ParallaxLayer>
+        ></ParallaxLayer>
         {/*  #2: HERO Mess Offset : 0 */}
         <ParallaxLayer
           style={{
@@ -85,27 +86,33 @@ function LandingPageContent({
           }}
           // speed={0.5}
         >
+          <NavBar />
           <div className={styles.main_text_container}>
             <p className={styles.main_text}>WELCOME TO DAO NATION</p>
-            <h1>A Decentralized Ecosystem for Social Impact</h1>
-            <h3>
-              DAO Nation provides financial and organizational infrastructure
-              <br />
-              for protocols and individuals to build and promote ESG-minded
-              projects
-              <br /> - via incubation, funding and collaboration
-            </h3>
-            <Button
-              className={styles.cta_button}
-              size='large'
-              variant='contained'
-            >
-              Join Our Discord
-            </Button>
+            <h1>DeFi Infrastructure for ReFi Initiatives</h1>
+            <div className={styles.hero_tagline_container}>
+              <h3 className={styles.hero_tagline}>
+                DAO Nation provides financial and organizational infrastructure
+                <br />
+                for protocols and individuals to build and promote ESG-minded
+                projects - via incubation, funding and collaboration
+              </h3>
+              <Link
+                href='https://firebasestorage.googleapis.com/v0/b/dao-nation-prod.appspot.com/o/DAO_Nation_-_Pitch_Deck_April_2022%20(1).pdf?alt=media&token=f6e8726d-e6b2-4a60-9407-0baebb39a474'
+                passHref={true}
+              >
+                <Button
+                  className={styles.cta_button}
+                  size='large'
+                  variant='contained'
+                >
+                  Pitch Deck
+                </Button>
+              </Link>
+            </div>
           </div>
         </ParallaxLayer>
-        {/* #3 : Join the Nation's Movmement*/}
-        <ParallaxLayer
+        {/* <ParallaxLayer
           offset={1.2}
           speed={0.1}
           className={styles.second_block}
@@ -167,14 +174,11 @@ function LandingPageContent({
             </Button>
           </div>
         </ParallaxLayer>
-        {/* #4 Our Infrastructure */}
         <ParallaxLayer offset={sectionTwoOffset} speed={0.2}>
-          <h1>SectionTwoOffset:{sectionTwoOffset}</h1>
           <p className={styles.block_main_text}>Our Infrastructure</p>
           <div className={styles.second_block_card_container}>
             <Card className={styles.second_block_card}>
               <CardContent>
-                {/* <p className={styles.card_header}>Launchpad</p> */}
                 <Image
                   src='/assets/ido-launchpad.png'
                   alt='IDO Launchpad'
@@ -189,7 +193,6 @@ function LandingPageContent({
             </Card>
             <Card className={styles.second_block_card}>
               <CardContent>
-                {/* <p className={styles.card_header}>Staking & Bonding</p> */}
                 <Image
                   src='/assets/staking-and-bonding.png'
                   alt='Staking & Bonding'
@@ -227,7 +230,6 @@ function LandingPageContent({
             </Card>
           </div>
         </ParallaxLayer>
-        {/* #5: Start your own ESG Protocol */}
         <ParallaxLayer offset={sectionThreeOffset} speed={0.2}>
           <div>
             <p className={styles.block_main_text}>
@@ -282,7 +284,6 @@ function LandingPageContent({
             />
           </div>
         </ParallaxLayer>
-        {/* #6: How Can I contribute */}
         <ParallaxLayer offset={sectionFourOffset} speed={0.2}>
           <Card className={styles.fourth_block_card}>
             <div className={styles.section_four_card_container}>
@@ -354,7 +355,6 @@ function LandingPageContent({
             </div>
           </Card>
         </ParallaxLayer>
-        {/* Get Rewarded for being a Part of the solution */}
         <ParallaxLayer offset={sectionFiveOffset} speed={0.2}>
           <div className={styles.section_five_container}>
             <div className={styles.section_five_header_container}>
@@ -420,7 +420,7 @@ function LandingPageContent({
               </div>
             </Card>
           </div>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
       </Parallax>
     </div>
   );

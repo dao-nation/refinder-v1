@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps, emotionCache }: MUIAppProps) {
   return (
     <PageProvider emotionCache={emotionCache}>
       <>
+        <NavBar />
         <Component {...pageProps} />
       </>
     </PageProvider>
